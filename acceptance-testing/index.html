@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test d’acceptation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+<!-- Header -->
+<header class="bg-blue-600 text-white p-6">
+    <div class="container mx-auto">
+        <h1 id="pageTitle" class="text-3xl font-bold">Test d’acceptation</h1>
+        <p id="pageSubtitle" class="text-xl mt-2">S’assurer que le produit est prêt pour l’utilisateur</p>
+        <nav class="mt-4">
+            <a href="../index.html" class="text-lg hover:underline">Retour à l’accueil</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Main Content -->
+<section class="container mx-auto mt-10 px-4">
+    <h2 class="text-2xl font-semibold text-blue-700" id="introTitle">Qu’est-ce que le test d’acceptation&nbsp;?</h2>
+    <p id="introText" class="mt-4 text-lg">
+        Le test d’acceptation est la dernière étape pour vérifier si un produit fonctionne pour de vrais utilisateurs.
+        C’est un peu comme vérifier une pizza avant de la manger&nbsp;: est-elle bien cuite, et a-t-elle les bonnes garnitures&nbsp;?
+    </p>
+
+    <!-- Interactive Example -->
+    <div id="interactiveSection" class="mt-8 bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold text-blue-700">Exemple interactif simple</h3>
+        <p class="mt-2">
+            Vous êtes l’utilisateur. Choisissez si le produit fonctionne ou non, puis décidez s’il doit être accepté ou rejeté.
+        </p>
+
+        <!-- Simple Acceptance Test -->
+        <div class="mt-4">
+            <label for="testResult" class="block mb-2 text-lg">Le produit fonctionne-t-il comme prévu&nbsp;?</label>
+            <select id="testResult" class="border p-2 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="none">Sélectionnez...</option>
+                <option value="pass">Oui, tout fonctionne</option>
+                <option value="fail">Non, il y a des problèmes</option>
+            </select>
+            <button id="acceptanceButton" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 mt-4 rounded transition duration-300">
+                Valider
+            </button>
+        </div>
+
+        <div id="acceptanceFeedback" class="mt-4 text-lg"></div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white mt-16 p-4">
+    <p class="text-center">© 2024 Belhaj Ouajdi</p>
+</footer>
+
+<!-- GSAP for animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
